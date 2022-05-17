@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div class="container-fluid">
+    <div class="container-fluid d-flex align-items-center">
       <HeaderComp />
     </div>
     
@@ -29,5 +29,10 @@ export default {
 <style lang="scss">
 @import './assets/style/general';
 @import './assets/style/vars';
+
+.container-fluid{
+  height: 60px;
+  background-color: #2b343f;
+}
 
 </style>

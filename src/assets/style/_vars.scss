@@ -1,7 +1,8 @@
 @import '~bootstrap/scss/bootstrap.scss';
-@import '~@fontsource/montserrat/index.scss';
-@import '~@fontsource/montserrat/900.scss';
+@import '~@fontsource/montserrat/index.css';
+@import '~@fontsource/montserrat/900.css';
 
 body{
   font-family: 'Montserrat';
+  background-color: #1e2d3b;
 }
