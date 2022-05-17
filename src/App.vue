@@ -1,9 +1,14 @@
 <template>
-  <div class="container">
+  <div>
 
-    <HeaderComp />
-    <CardsComp />
-  
+    <div class="container-fluid">
+      <HeaderComp />
+    </div>
+    
+    <div class="container">
+      <CardsComp />
+    </div>
+    
   </div>
 </template>
 
@@ -17,12 +22,10 @@ export default {
   components: {
     CardsComp,
     HeaderComp
-}
+  }
 }
 </script>
 
 <style lang="scss">
-#app {
-  
-}
+
 </style>
