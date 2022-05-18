@@ -25,14 +25,12 @@ header{
   }
   
   .rl-select{
-    width: 11%;
+    width: 170px;
     border: none;
     padding: 5px 12px;
     border-radius: 5px;
     font-size: 12px;
   }
 }
-
-
 
 </style>

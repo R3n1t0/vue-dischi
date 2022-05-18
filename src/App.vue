@@ -4,9 +4,10 @@
     <div class="container-fluid d-flex align-items-center">
       <HeaderComp />
     </div>
+
     
-    <div class="container">
-      <CardsComp />
+    <div class="container">        
+      <CardsComp />            
     </div>
     
   </div>
@@ -35,4 +36,8 @@ export default {
   background-color: #2b343f;
 }
 
+.container{
+  height: calc(100vh - 60px);
+  background-color: white;
+}
 </style>
