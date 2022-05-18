@@ -25,11 +25,13 @@ div{
   background-color: #2e3a46;
   img{
     width: 100%;
-    height: 60%;
   }
   h6{
     color: white;
     margin-top: 20px;
+  }
+  p,span{
+    color: #787574;
   }
   
 }
