@@ -1,28 +1,18 @@
 <template>
   <div>
+       
+    <CardsComp class="native" />            
 
-    <div class="container-fluid d-flex align-items-center">
-      <HeaderComp />
-    </div>
-
-    
-    <div class="container">        
-      <CardsComp />            
-    </div>
-    
   </div>
 </template>
 
 <script>
 import CardsComp from './components/CardsComp.vue';
-import HeaderComp from './components/HeaderComp.vue';
-
 
 export default {
   name: 'App',
   components: {
     CardsComp,
-    HeaderComp
   }
 }
 </script>
@@ -31,8 +21,9 @@ export default {
 @import './assets/style/general';
 @import './assets/style/vars';
 
-.container-fluid{
-  height: 60px;
-  background-color: #2b343f;
+.native{
+  width: 100%;
+  height: 100vh;
 }
+
 </style>

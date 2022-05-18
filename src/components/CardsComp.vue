@@ -1,16 +1,27 @@
 <template>
-  <div class="cards-container d-flex my-5">
-    <CardItem 
+
+  <div class="rl-container">
+
+    <div class="top">
+      <SelectComp />
+    </div>
+
+    <div class="cards-container container">
+      <CardItem 
       v-for="card in cardsList.response"
       :key="`card-${card}`"
       :cardData="card"
-    />
+      />
+    </div>
+    
   </div>
+  
 </template>
 
 <script>
 import axios from "axios"
 import CardItem from "./CardItem.vue"
+import SelectComp from "./SelectComp.vue";
 
 
 export default {
@@ -36,17 +47,27 @@ export default {
   },
 
   components:{
-    CardItem
+    CardItem,
+    SelectComp
   }
 }
 </script>
 
 <style lang="scss" scoped>
 
-.cards-container{
+.rl-container{
   width: 100%;
-  justify-content: center;
-  flex-wrap: wrap;
+  height: 100vh;
+
+  .top{
+    width: 100%;
+  }
+
+  .cards-container{
+    height: calc(100vh - 50px);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 </style>

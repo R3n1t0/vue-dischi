@@ -1,9 +1,9 @@
 <template>
-  <div class="d-flex text-center p-3 m-2">
+  <div class="rl-card d-flex text-center p-3 m-2">
     <img :src="cardData.poster" :alt="cardData.author">
     <h6>{{cardData.title}}</h6>
     <p>{{cardData.author}}</p>
-    <span>{{cardData.year}}</span>
+    <p>{{cardData.year}}</p>
   </div>
 </template>
 
@@ -18,8 +18,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div{
-  flex-basis: calc(100% / 6);
+.rl-card{
+  width: calc(100% / 6);
   flex-direction: column;
   align-items: center;
   background-color: #2e3a46;
@@ -30,7 +30,7 @@ div{
     color: white;
     margin-top: 20px;
   }
-  p,span{
+  p{
     color: #787574;
   }
   
