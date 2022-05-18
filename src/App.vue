@@ -36,8 +36,7 @@ export default {
   background-color: #2b343f;
 }
 
-.container{
-  height: calc(100vh - 60px);
-  background-color: white;
-}
+/* .container{
+  height: calc(100vh - 100px);
+} */
 </style>

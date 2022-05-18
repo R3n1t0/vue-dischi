@@ -1,5 +1,5 @@
 <template>
-  <div class="cards d-flex">
+  <div class="cards-container d-flex my-5">
     <CardItem 
       v-for="card in cardsList.response"
       :key="`card-${card}`"
@@ -43,8 +43,10 @@ export default {
 
 <style lang="scss" scoped>
 
-.cards{
+.cards-container{
   width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 </style>

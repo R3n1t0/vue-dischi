@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="d-flex text-center p-3 m-2">
     <img :src="cardData.poster" :alt="cardData.author">
-    <h4>{{cardData.title}}</h4>
+    <h6>{{cardData.title}}</h6>
     <p>{{cardData.author}}</p>
     <span>{{cardData.year}}</span>
   </div>
@@ -19,10 +19,19 @@ export default {
 
 <style lang="scss" scoped>
 div{
-  width: calc(100% / 5);
+  flex-basis: calc(100% / 6);
+  flex-direction: column;
+  align-items: center;
+  background-color: #2e3a46;
   img{
     width: 100%;
+    height: 60%;
   }
+  h6{
+    color: white;
+    margin-top: 20px;
+  }
+  
 }
 
 </style>
