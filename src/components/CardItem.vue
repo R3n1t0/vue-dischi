@@ -20,6 +20,7 @@ export default {
 <style lang="scss" scoped>
 .rl-card{
   width: calc(100% / 6);
+  height: 350px;
   flex-direction: column;
   align-items: center;
   background-color: #2e3a46;

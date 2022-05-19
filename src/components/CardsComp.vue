@@ -8,8 +8,7 @@
 
     <div class="cards-container d-flex mt-5 container">
       <CardItem 
-      :genreChosed="genreChosed"
-      v-for="(card, index) in cardsList"
+      v-for="(card, index) in arrayFiltered"
       :key="`card-${index}`"
       :cardData="card"
       />
@@ -27,11 +26,18 @@ import SelectComp from "./SelectComp.vue";
 
 export default {
   name: "CardsComp",
+
+  components:{
+    CardItem,
+    SelectComp
+  },
+
   data(){
     return{
       apiUrl: "https://flynn.boolean.careers/exercises/api/array/music",
       cardsList: [],
-      genreChosed: ""
+      genreChosed: "",
+      filteredArray: []
     };
   },
 
@@ -52,9 +58,13 @@ export default {
     }
   },
 
-  components:{
-    CardItem,
-    SelectComp
+  computed:{
+    arrayFiltered(){
+      if(this.genreChosed === ""){
+        return this.cardsList;
+      }
+      return this.cardsList.filter(album => album.genre === this.genreChosed) 
+    }
   }
 }
 </script>

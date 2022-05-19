@@ -1,6 +1,6 @@
 <template>
   <div>   
-    <CardsComp class="native" />            
+    <CardsComp />            
   </div>
 </template>
 

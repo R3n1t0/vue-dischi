@@ -1,7 +1,7 @@
 <template>
   <div class="up d-flex">
       <i class="fa-brands fa-spotify"></i>
-      <select v-model="genreChosed" @change="$emit('searching', genreChosed)" class="form-select rl-select" name="genre" >
+      <select v-model.trim="genreChosed" @change="$emit('searching', genreChosed)" class="form-select rl-select" name="genre" >
         <option value="">Seleziona un genere</option>
         <option value="Rock">Rock</option>
         <option value="Pop">Pop</option>
