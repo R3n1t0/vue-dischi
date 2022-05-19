@@ -8,7 +8,7 @@
 
     <div class="cards-container d-flex mt-5 container">
       <CardItem 
-      v-for="card in cardsList.response"
+      v-for="card in cardsList"
       :key="`card-${card}`"
       :cardData="card"
       />
@@ -41,7 +41,7 @@ export default {
     getApi(){
       axios.get(this.apiUrl)
       .then(res => {
-        this.cardsList = res.data;
+        this.cardsList = res.data.response;
       });
     },
   },

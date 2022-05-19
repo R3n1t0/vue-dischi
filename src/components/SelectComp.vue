@@ -1,19 +1,24 @@
 <template>
   <div class="up d-flex">
       <i class="fa-brands fa-spotify"></i>
-      <select class="form-select rl-select" name="generi" >
-        <option selected>Seleziona un genere</option>
-        <option value="1">Rock</option>
-        <option value="2">Pop</option>
-        <option value="3">renatoseiuncoglione</option>
-        <option value="4">Seleziona un genere</option>
+      <select v-model="genreToSearch" class="form-select rl-select" name="generi" >
+        <option value="" selected>Seleziona un genere</option>
+        <option value="Rock">Rock</option>
+        <option value="Pop">Pop</option>
+        <option value="Jazz">Jazz</option>
+        <option value="Metal">Metal</option>
       </select>
     </div>
 </template>
 
 <script>
 export default {
-  name: "SelectComp"
+  name: "SelectComp",
+  data(){
+    return{
+      genreToSearch: ""
+    }
+  }
 }
 </script>
 
