@@ -6,7 +6,7 @@
       <SelectComp />
     </div>
 
-    <div class="cards-container container">
+    <div class="cards-container d-flex mt-5 container">
       <CardItem 
       v-for="card in cardsList.response"
       :key="`card-${card}`"

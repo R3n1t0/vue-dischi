@@ -1,8 +1,6 @@
 <template>
-  <div>
-       
+  <div>   
     <CardsComp class="native" />            
-
   </div>
 </template>
 
@@ -21,9 +19,5 @@ export default {
 @import './assets/style/general';
 @import './assets/style/vars';
 
-.native{
-  width: 100%;
-  height: 100vh;
-}
 
 </style>
