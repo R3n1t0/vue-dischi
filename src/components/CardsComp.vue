@@ -3,12 +3,12 @@
   <div class="rl-container">
 
     <div class="top">
-      <SelectComp @searching="searching"/>
+      <SelectsComp @genreSearching="genreSearching" @albumSearching="albumSearching"/>
     </div>
 
     <div class="cards-container d-flex mt-5 container">
       <CardItem 
-      v-for="(card, index) in arrayFiltered"
+      v-for="(card, index) in genreFiltered"
       :key="`card-${index}`"
       :cardData="card"
       />
@@ -21,7 +21,7 @@
 <script>
 import axios from "axios"
 import CardItem from "./CardItem.vue"
-import SelectComp from "./SelectComp.vue";
+import SelectsComp from "./SelectsComp.vue";
 
 
 export default {
@@ -29,7 +29,7 @@ export default {
 
   components:{
     CardItem,
-    SelectComp
+    SelectsComp
   },
 
   data(){
@@ -37,6 +37,7 @@ export default {
       apiUrl: "https://flynn.boolean.careers/exercises/api/array/music",
       cardsList: [],
       genreChosed: "",
+      albumChosed: ""
     };
   },
 
@@ -52,13 +53,17 @@ export default {
       });
     },
 
-    searching(genreChosed){
+    genreSearching(genreChosed){
       this.genreChosed = genreChosed
+    },
+
+    albumSearching(albumChosed){
+      this.albumChosed = albumChosed
     }
   },
 
   computed:{
-    arrayFiltered(){
+    genreFiltered(){
       if(this.genreChosed === ""){
         return this.cardsList;
       }
