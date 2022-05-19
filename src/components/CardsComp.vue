@@ -3,13 +3,14 @@
   <div class="rl-container">
 
     <div class="top">
-      <SelectComp />
+      <SelectComp @searching="searching"/>
     </div>
 
     <div class="cards-container d-flex mt-5 container">
       <CardItem 
-      v-for="card in cardsList"
-      :key="`card-${card}`"
+      :genreChosed="genreChosed"
+      v-for="(card, index) in cardsList"
+      :key="`card-${index}`"
       :cardData="card"
       />
     </div>
@@ -30,6 +31,7 @@ export default {
     return{
       apiUrl: "https://flynn.boolean.careers/exercises/api/array/music",
       cardsList: [],
+      genreChosed: ""
     };
   },
 
@@ -44,6 +46,10 @@ export default {
         this.cardsList = res.data.response;
       });
     },
+
+    searching(genreChosed){
+      this.genreChosed = genreChosed
+    }
   },
 
   components:{

@@ -1,6 +1,6 @@
 <template>
   <div class="rl-card d-flex text-center p-3 m-2">
-    <img :src="cardData.poster" :alt="cardData.author">
+    <img :src="cardData.poster" :alt="cardData.title">
     <h6>{{cardData.title}}</h6>
     <p>{{cardData.author}}</p>
     <p>{{cardData.year}}</p>
